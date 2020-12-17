@@ -1,4 +1,5 @@
 var tasks=0;
+console.log("Aditya's ToDo List");
 var input = document.getElementById('add');
 input.addEventListener("keyup", event => {
     if(event.key==='Enter'){
