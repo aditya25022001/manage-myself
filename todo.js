@@ -11,22 +11,18 @@ function addTask(){
         var task = document.createElement("div");
         task.innerHTML= document.getElementById('add').value;
         task.id='task';
-        var remove = document.createElement('button');
-        remove.innerHTML='Done';
+        var remove = document.createElement('button')
+        remove.innerHTML='&#128077;';
         remove.id='remove';
-    ;    var edit = document.createElement('button');
-        edit.innerHTML = 'Edit';
+        var edit = document.createElement('button');
+        edit.innerHTML = '&#128393;';
         edit.id='edit';
-        task.appendChild(edit);
         task.appendChild(remove);
+        task.appendChild(edit);
         document.getElementById('add').value='';
         document.getElementById('tasks').appendChild(task);
     }
     else{
         console.log("Aditya's ToDo List")
     }
-}
-function setStyle(ident){
-    console.log(ident);
-    document.getElementById(ident).style.float='left';
 }

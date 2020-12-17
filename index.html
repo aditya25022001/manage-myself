@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="todo.js" async defer></script>
     </head>
     <body>
@@ -15,8 +16,10 @@
                 <h1>To Do's For the day</h1>
             </div>
             <div class="addtodo" id="addtodo">Add To-Do</div>
-            <input class="add" id="add" type="text"  placeholder="Eg: homework" style="font-size: 20px;">
-            <span class="adding"><button class="addtask" id="addtask" onclick="addTask()">ADD</button></span>
+            <div>
+                <input class="add" id="add" type="text"  placeholder="Eg: homework" style="font-size: 20px;">
+                <button class="addtask" id="addtask" onclick="addTask()">ADD</button>
+            </div>
             <div class="divider"></div>
             <div class="tasks" id="tasks">
 

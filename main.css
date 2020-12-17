@@ -8,7 +8,7 @@ body{
     width: 520px;
     margin-left:30%;
     margin-top: 20px;
-    border: 1px black ridge;
+    border:1px rgb(182, 178, 178) ridge ;
 }
 .header{
     width: 400px;
@@ -28,8 +28,7 @@ body{
     margin-bottom: 5px;
 }
 .add{
-    border-style: inset;
-    border-width: 1px;
+    border:1px rgb(182, 178, 178) ridge;
     outline-offset: 0ch;
     outline : none;
     border-radius: 6px;
@@ -37,9 +36,13 @@ body{
     height: 40px;
     margin-left:10px ;
 }
+.add:focus{
+    border: 1px rgb(90, 189, 255) ridge;
+    box-shadow: 0 0 5px  rgb(90, 189, 255) ;
+}
 .addtask{
     width: 80px;
-    height: 42px;
+    height: 40px;
     border-radius: 6px;
     border-width: 0;
     outline: none;
@@ -61,9 +64,27 @@ body{
     padding-bottom: 6px;
     border-bottom: 1px rgb(182, 178, 178) ridge;
 }
-#edit, #remove{
+#edit{
     float:right;
-    margin-top: 6px;
     height: 20px;
     margin-right: 10px;
+    border:none;
+    font-size: 25px;
+    outline: none;
+    outline-offset: none;
+    margin-top: 0px;
+    outline-offset: none;
+    color: black;
+}
+#remove{
+    font-size: 20px;
+    float:right;
+    margin-top: 1px;
+    border: none;
+    outline: none;
+    outline-offset: none;
+    height: 20px;
+    color: black;
+    margin-right: 10px;
+
 }
