@@ -16,6 +16,7 @@ body{
     padding:30px 0px 30px 120px;
     background-color: rgb(226, 223, 223);
     border-bottom: 1px rgb(182, 178, 178) ridge;
+    position: sticky;
 }
 .divider{
     margin-top: 25px;
@@ -49,4 +50,20 @@ body{
 .addtask:hover{
     background-color:rgb(16, 16, 143);
     transition: linear 0.1s;
+}
+.tasks{
+    font-size: 20px;
+    height: 500px;
+    overflow: hidden;
+}
+#task{
+    padding-left: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px rgb(182, 178, 178) ridge;
+}
+#edit, #remove{
+    float:right;
+    margin-top: 6px;
+    height: 20px;
+    margin-right: 10px;
 }
