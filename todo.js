@@ -1,5 +1,20 @@
+document.onclick = event =>{
+    var el = event.target;
+    var parent = el.parentNode.id;
+    if(el.className == 'remove' && el.nodeName=="BUTTON"){
+        doneTaskt(parent);
+    }
+    if(el.className == 'edit' && el.nodeName == "BUTTON"){
+        editTask(parent);
+    }
+    if(el.className == 'ok' && el.nodeName == "BUTTON"){
+        edited(parent);
+    }
+}
+var listCompleted=[];
 var tasks=0;
-var toggle=0;
+var toggleStar=0;
+var toggleEdit=0;
 console.log("Aditya's ToDo List");
 var input = document.getElementById('complete-before');
 input.addEventListener("keyup", event => {
@@ -18,7 +33,7 @@ function addTask(){
         var tas=task.id;
         
         var time = document.createElement('span');
-        time.innerHTML = document.getElementById('complete-before').value;
+        time.innerHTML ="Due : " + document.getElementById('complete-before').value;
         time.id='comptd';
         time.className='comptd';
 
@@ -44,7 +59,7 @@ function addTask(){
         task.appendChild(edit);
         task.appendChild(date);
         task.appendChild(time);
-        if(toggle==1){
+        if(toggleStar==1){
             var star = document.createElement('button');
             star.innerHTML = String.fromCharCode(9733);
             star.style.color='rgb(230,184,0)';
@@ -58,21 +73,55 @@ function addTask(){
     
         document.getElementById('imp').style.color='rgb(0,0,0)';
         document.getElementById('imp').innerHTML=String.fromCharCode(9734);
-        toggle=0;
+        toggleStar=0;
     }
     else{
         console.log("Aditya's ToDo List")
     }
 }
 function setImportance(){
-    if(toggle===0){
+    if(toggleStar===0){
         document.getElementById('imp').innerHTML=String.fromCharCode(9733);
         document.getElementById('imp').style.color='rgb(230, 184, 0)';
-        toggle=1;
+        toggleStar=1;
     }
     else{
         document.getElementById('imp').innerHTML=String.fromCharCode(9734);
         document.getElementById('imp').style.color='rgb(0,0,0)';
-        toggle=0;
+        toggleStar=0;
     }
+}
+function doneTaskt(parentId){
+    //console.log("Aditya");
+    //console.log(document.getElementById(parentId).childNodes[1].id)
+    if(listCompleted.includes(parentId)==false){
+        var time1 = new Date(); 
+        document.getElementById(parentId).style.color='rgb(146,141,141)';
+        document.getElementById(parentId).childNodes[1].innerHTML='&#10004;';
+        var before = document.getElementById(parentId).childNodes[4].innerHTML;
+        document.getElementById(parentId).childNodes[1].disabled='true';
+        document.getElementById(parentId).childNodes[2].disabled='true';
+        document.getElementById(parentId).childNodes[5].disabled='true';
+        document.getElementById(parentId).childNodes[4].innerHTML='Done :'+time1.getHours()+":"+time1.getMinutes()+"   "+before;
+        listCompleted.push(parentId);
+    }
+}
+function editTask(parentId){
+    //console.log('Ubale');
+    if(toggleEdit==0){
+        var ok = document.createElement("button");
+        ok.innerHTML="OK";
+        ok.className='ok';
+        ok.id='ok'
+        document.getElementById(parentId).appendChild(ok);
+        document.getElementById(parentId).contentEditable='true';
+        document.getElementById(parentId).childNodes[3].contentEditable='false';
+        toggleEdit=1;
+    }
+}
+function edited(parentId){
+    var child = document.getElementById('ok');
+    document.getElementById(parentId).removeChild(child);
+    document.getElementById(parentId).contentEditable='false';
+    toggleEdit=0;
 }

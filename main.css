@@ -101,6 +101,7 @@ body{
 .star{
     float: right;
     margin-right: 6px;
+    margin-top: 2px;
     border: none;
     outline-offset: none;
     outline: none;
@@ -120,8 +121,20 @@ body{
     outline-offset: none;
     color: black;
 }
+.ok{
+    float: right;
+    background-color: rgb(62, 137, 235);
+    color:whitesmoke;
+    margin-top: 1px;
+    margin-right: 6px;
+    border: none;
+    outline-offset: none;
+    outline: none;
+    height: 30px;
+}
 .remove{
     font-size: 20px;
+    color: green;
     background-color: rgb(236, 235, 235);
     float:right;
     margin-top: 1px;
@@ -129,11 +142,15 @@ body{
     outline: none;
     outline-offset: none;
     height: 30px;
-    color: black;
+    color: green;
     margin-right: 10px;
 }
 .remove:hover, .edit:hover, .star:hover{
     background-color:white;
+}
+.remove:active, .edit:active, .star:active{
+    background-color:rgb(160, 152, 152);
+    transition: linear 0.2s;
 }
 .imp{
     margin-left: 5px;
