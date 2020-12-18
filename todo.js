@@ -1,3 +1,4 @@
+console.log('Authentication and backend due to learn');
 document.onclick = event =>{
     var el = event.target;
     var parent = el.parentNode.id;
@@ -15,7 +16,6 @@ var listCompleted=[];
 var tasks=0;
 var toggleStar=0;
 var toggleEdit=0;
-console.log("Aditya's ToDo List");
 var input = document.getElementById('complete-before');
 input.addEventListener("keyup", event => {
     if(event.key==='Enter'){
