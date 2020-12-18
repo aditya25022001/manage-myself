@@ -15,9 +15,14 @@
             <div class="header" id="header">
                 <h1>To Do's For the day</h1>
             </div>
-            <div class="addtodo" id="addtodo">Add To-Do</div>
+            <div class="addtodo" id="addtodo">
+                <span class="inputf" id="inputf">Add Task</span>
+                <span class="compt" id="compt">Complete before</span>
+            </div>
             <div>
-                <input class="add" id="add" type="text"  placeholder="Eg: homework" style="font-size: 20px;">
+                <input class="add" id="add" type="text"  placeholder="Eg: homework" style="font-size: 20px;" maxlength="40">
+                <input class="complete-before" id="complete-before" type="time" style="font-size: 15px;" placeholder="HH : MM : SS"> 
+                <span class="imp" id="imp" style="font-size: 28px; cursor: pointer;" onclick="setImportance()">&#9734;</span>
                 <button class="addtask" id="addtask" onclick="addTask()">ADD</button>
             </div>
             <div class="divider"></div>

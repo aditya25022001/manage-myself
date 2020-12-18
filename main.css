@@ -1,19 +1,20 @@
 body{
     background-color:white;
+    cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .main-body{
     height: 750px;
     background-color: rgb(236, 235, 235);
-    width: 520px;
-    margin-left:30%;
+    width: 900px;
+    margin-left:20%;
     margin-top: 20px;
     border:1px rgb(182, 178, 178) ridge ;
 }
 .header{
-    width: 400px;
+    width: 590px;
     text-align: centre;
-    padding:30px 0px 30px 120px;
+    padding:30px 0px 30px 310px;
     background-color: rgb(226, 223, 223);
     border-bottom: 1px rgb(182, 178, 178) ridge;
     position: sticky;
@@ -23,9 +24,29 @@ body{
     border-top: 1px rgb(182, 178, 178) ridge ;
 }
 .addtodo{
-    margin-left: 220px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+.inputf{
+    margin-left: 180px;;
+}
+.compt{
+    margin-left: 200px;
+}
+.complete-before{
+    border:1px rgb(182, 178, 178) ridge;
+    outline-offset: 0ch;
+    outline : none;
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:160px;
+    height: 40px;
+    margin-left:10px ;
+}
+.date{
+    float:right ;
+    margin-top: 8px;
+    margin-right: 5px;
 }
 .add{
     border:1px rgb(182, 178, 178) ridge;
@@ -41,10 +62,12 @@ body{
     box-shadow: 0 0 5px  rgb(90, 189, 255) ;
 }
 .addtask{
-    width: 80px;
-    height: 40px;
+    width: 50px;
+    height: 30px;
     border-radius: 6px;
     border-width: 0;
+    margin-top: -10px;
+    padding-top: -10px;
     outline: none;
     outline-offset: none;
     background-color: rgb(54, 54, 241);
@@ -57,16 +80,20 @@ body{
 .tasks{
     font-size: 20px;
     height: 500px;
-    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
-#task{
+.tasks::-webkit-scrollbar{
+    display:none;
+}
+.task{
     padding-left: 10px;
     padding-bottom: 6px;
     border-bottom: 1px rgb(182, 178, 178) ridge;
 }
-#edit{
+.edit{
     float:right;
-    height: 20px;
+    height: 30px;
     margin-right: 10px;
     border:none;
     font-size: 25px;
@@ -76,15 +103,21 @@ body{
     outline-offset: none;
     color: black;
 }
-#remove{
+.remove{
     font-size: 20px;
     float:right;
     margin-top: 1px;
     border: none;
     outline: none;
     outline-offset: none;
-    height: 20px;
+    height: 30px;
     color: black;
     margin-right: 10px;
-
+}
+.remove:hover, .edit:hover{
+    background-color:white;
+}
+.imp{
+    margin-left: 5px;
+    margin-right: 5px;
 }
