@@ -115,7 +115,13 @@ function editTask(parentId){
         ok.id='ok'
         document.getElementById(parentId).appendChild(ok);
         document.getElementById(parentId).contentEditable='true';
-        document.getElementById(parentId).childNodes[3].contentEditable='false';
+        document.getElementById(parentId).childNodes[3].contentEditable='false';    
+        document.getElementById(parentId).childNodes[1].contentEditable='false';
+        document.getElementById(parentId).childNodes[2].contentEditable='false';
+        document.getElementById(parentId).childNodes[5].contentEditable='false';
+        document.getElementById('add').disabled='true';
+        document.getElementById('complete-before').disabled='true';
+        document.getElementById(parentId).childNodes[1].disabled='true';
         toggleEdit=1;
     }
 }
