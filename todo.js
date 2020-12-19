@@ -92,8 +92,6 @@ function setImportance(){
     }
 }
 function doneTaskt(parentId){
-    //console.log("Aditya");
-    //console.log(document.getElementById(parentId).childNodes[1].id)
     if(listCompleted.includes(parentId)==false){
         var time1 = new Date(); 
         document.getElementById(parentId).style.color='rgb(146,141,141)';
@@ -107,7 +105,6 @@ function doneTaskt(parentId){
     }
 }
 function editTask(parentId){
-    //console.log('Ubale');
     if(toggleEdit==0){
         var ok = document.createElement("button");
         ok.innerHTML="OK";

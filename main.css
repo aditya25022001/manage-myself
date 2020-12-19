@@ -43,6 +43,10 @@ body{
     height: 40px;
     margin-left:10px ;
 }
+.complete-before:focus{
+    border: 1px rgb(90, 189, 255) ridge;
+    box-shadow: 0 0 5px  rgb(90, 189, 255) ;
+}
 .date{
     float:right ;
     margin-top: 8px;
